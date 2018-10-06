@@ -31,6 +31,9 @@ wheels/
 *.manifest
 *.spec
 
+# OSX attributes/meta-data files
+.DS_Store
+
 # Installer logs
 pip-log.txt
 pip-delete-this-directory.txt
