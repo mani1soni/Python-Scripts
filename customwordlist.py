@@ -48,7 +48,6 @@ def Confirm(thingtoconfirm):
 class Generator(threading.Thread):
     seperators = ["-", " ", ".", "", "_",":"]
     suffix = ["", "123", "321", "!", "!!", "1", "2", "123456" ".", "*", "@", "..", ";"]
-    numbersforletters = {'a': '4', 'g': '6', 's': '5', 'b': '8', 't': '7', 'z': '2', 'i': '1', 'o': '0', 'e': '3', 'q': '9', 'A': '4', 'G': '6', 'S': '5', 'B': '8', 'T': '7', 'Z': '2', 'I': '1', 'O': '0', 'E': '3', 'Q': '9'}
 
     def __init__(self, keywords, q):
         super().__init__()
@@ -58,7 +57,7 @@ class Generator(threading.Thread):
     def run(self):
         for i in self.keywords:
             self.q.put(i)
-        for num, i in enumerate(self.keywords):
+        for i in enumerate(self.keywords):
             for e in self.seperators:
                 for l in self.suffix:
                     for t in self.suffix:
