@@ -3,10 +3,7 @@ from bs4 import BeautifulSoup
 import csv
 import lxml
 
-# Планы:
-# 1. Выяснить количество страниц
-# 2. Сформировать список урлов на страницы выдачи
-# 3. Собрать данные
+
 
 def get_html(url):
 	r = requests.get(url)
