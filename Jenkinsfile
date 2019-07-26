@@ -4,7 +4,10 @@ pipeline{
         stage("test"){
             steps{
                 input message: 'give arguments', ok: 'done', parameters: [string(defaultValue: '', description: '', name: 'SOMETHING', trim: false)]
-                sh "run.sh $SOMETHING"
+                echo "$SOMETHING"
+                sh '''
+                sh run.sh $SOMETHING
+                '''
             }
         }
     }
