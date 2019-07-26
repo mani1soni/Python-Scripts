@@ -3,9 +3,8 @@ pipeline{
     stages{
         stage("test"){
             steps{
-                sh '''sh run.sh''' 
-                input id: 'Pass arguments', message: 'pass arguments', ok: 'done', parameters: [string(defaultValue: 'string', description: 'string', name: 'string', trim: false)]
-            }
+                input id: 'Pass arguments', message: 'pass arguments', ok: 'done', parameters: [choice(choices: ['$1', '$2'], description: '', name: 'agruments')]
+                sh '''sh run.sh '''
         }
     }
 }
