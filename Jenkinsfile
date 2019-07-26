@@ -3,7 +3,7 @@ pipeline{
     stages{
         stage("test"){
             steps{
-                input message: 'Write some thing', parameters: [string(defaultValue: '', description: '', name: 'SOMETHING', trim: false)]                
+                input message: 'give arguments', ok: 'done', parameters: [string(defaultValue: '', description: '', name: 'SOMETHING', trim: false)], submitterParameter: 'SOMETHING'
                 sh '''
                 sh run.sh $SOMETHING
                 '''
