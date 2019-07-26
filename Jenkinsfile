@@ -4,8 +4,9 @@ pipeline{
         stage("test"){
             steps{
                 input id: 'Pass arguments', message: 'pass arguments', ok: 'done', parameters: [text(defaultValue: '', description: 'give arguments', name: 'give')]
-                sh "run.sh $give"
-                
+                sh '''
+                sh run.sh $give
+                '''
             }
         }
     }
