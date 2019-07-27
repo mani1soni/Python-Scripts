@@ -5,7 +5,7 @@ pipeline{
         stage("test"){
             steps{
                 script{
-                    output=input message: 'give arguments', ok: 'done', parameters: [string(defaultValue: '', description: '', name: 'SOMETHING', trim: false)]
+                    def output=input message: 'give arguments', ok: 'done', parameters: [string(defaultValue: '', description: '', name: 'SOMETHING', trim: false)]
                 }
                 sh '''
                 sh run.sh $output
