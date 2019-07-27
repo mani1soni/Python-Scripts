@@ -7,9 +7,9 @@ pipeline{
                 script{
                     def output=input message: 'give arguments', ok: 'done', parameters: [string(defaultValue: '', description: '', name: 'SOMETHING', trim: false)]
                 }
-                sh '''
+                
                 sh "echo ${output}"
-                '''
+                
             }
         }
     }
