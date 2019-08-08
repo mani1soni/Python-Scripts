@@ -1,6 +1,6 @@
 #!/bin/bash
 
 echo "$HOME"
-echo "done"
+echo "yeah"
 
 
