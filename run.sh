@@ -1,6 +1,7 @@
 #!/bin/bash
 
-echo "$HOME"
-echo "yeah"
+echo "${MY_ENV}"
+
+
 
 
