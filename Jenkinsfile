@@ -25,6 +25,9 @@ pipeline{
                 sh '''
                 sh run.sh
                 '''
+                script{
+                    browser = sh(returnStdout: true, script: '2nd hi')
+                }
             }
         }
     }
