@@ -1,4 +1,4 @@
-
+def browser = 'unknown'
 pipeline{
     agent any
     stages{
@@ -11,6 +11,9 @@ pipeline{
                     sh '''
                     sh run.sh 
                     '''
+                script{
+                    browser = sh(returnStdout: true, script: 'echo Chrome')
+                }
                 
             }
         }
